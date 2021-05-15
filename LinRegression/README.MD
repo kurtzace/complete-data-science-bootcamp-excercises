@@ -25,3 +25,28 @@ def adjustedR2(x,y reg):
         self.p = np.squeeze(2 * (1 - stat.t.cdf(np.abs(self.t), y.shape[0] - X.shape[1])))
         return self
 ```
+
+## Calculate the univariate p-values of the variables
+```
+from sklearn.feature_selection import f_regression
+
+freg=f_regression(x,y)
+
+p=freg[1]
+
+print(p.round(3))
+```
+
+
+### Create a summary table with your findings¶
+
+```
+reg_summary = pd.DataFrame([['size'],['year']],columns =['Features'])
+reg_summary['Coefficients'] = reg.coef_
+reg_summary['p-values'] = p.round(3)
+reg_summary.head()
+
+	Features 	Coefficients 	p-values
+0 	size 	227.700854 	0.000
+1 	year 	2916.785327 	0.357
+```
