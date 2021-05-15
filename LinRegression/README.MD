@@ -50,3 +50,5 @@ reg_summary.head()
 0 	size 	227.700854 	0.000
 1 	year 	2916.785327 	0.357
 ```
+
+P value is more than 0.05 and fstat is very low - year is insignificant. can be dropped
