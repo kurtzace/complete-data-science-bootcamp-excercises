@@ -71,4 +71,22 @@ rescaledpredictX = scaler.transform(actualpredictX)
 reg.predict(rescaledpredictX)
 ```
 
+## Vif
+
+https://www.statsmodels.org/stable/generated/statsmodels.stats.outliers_influence.variance_inflation_factor.html
+https://statisticalhorizons.com/multicollinearity
+
+snippet from above
+```
+obtaining the R2 from that regression. The VIF is just 1/(1-(R^2)).
+Estimates how much the variance of a coefficient is “inflated” because of linear dependence with other predictors. Thus, a VIF of 1.8 tells us that the variance (the square of the standard error) of a particular coefficient is 80% larger than it would be if that predictor was completely uncorrelated with all the other predictors.
+
+The VIF has a lower bound of 1 but no upper bound. Authorities differ on how high the VIF has to be to constitute a problem. Personally, I tend to get concerned when a VIF is greater than 2.50, which corresponds to an R2 of .60 with the other variables.
+
+above talks about three situations in which a high VIF is not a problem and can be safely ignored:
+-  (dummy) variables
+-  If you specify a regression model with both x and x2, there’s a good chance that those two variables will be highly correlated. 
+-  high VIFs are control variables: the sample consists of U.S. colleges, the dependent variable is graduation rate, and the variable of interest is an indicator (dummy) for public vs. private. Two control variables are average SAT scores and average ACT scores for entering freshmen. 
+```
+
 
