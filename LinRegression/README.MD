@@ -107,3 +107,8 @@ data_cleaned['name_of_categorical_variable'].unique() gives some missing.
 The benchmark categories are as follows:
 reorder the categorical variables prior to using .get_dummies() to customize
 
+## All steps
+![AllStepsLinearReg](https://user-images.githubusercontent.com/2136211/118398745-a2957780-b677-11eb-8720-ea3dfb02e11b.png)
+
+
+
