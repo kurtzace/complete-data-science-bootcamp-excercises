@@ -99,3 +99,11 @@ vif["VIF"] = [variance_inflation_factor(variables.values, i) for i in range(vari
 vif["features"] = variables.columns
 ```
 
+
+## What are the reference/benchmark categories for each cat?
+```
+data_cleaned['name_of_categorical_variable'].unique() gives some missing.
+```
+The benchmark categories are as follows:
+reorder the categorical variables prior to using .get_dummies() to customize
+
