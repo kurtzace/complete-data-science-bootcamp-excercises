@@ -88,5 +88,7 @@ above talks about three situations in which a high VIF is not a problem and can 
 -  If you specify a regression model with both x and x2, there’s a good chance that those two variables will be highly correlated. 
 -  high VIFs are control variables: the sample consists of U.S. colleges, the dependent variable is graduation rate, and the variable of interest is an indicator (dummy) for public vs. private. Two control variables are average SAT scores and average ACT scores for entering freshmen. 
 ```
+in general
+![image](https://user-images.githubusercontent.com/2136211/118392467-871a7480-b657-11eb-95de-261274ff2865.png)
 
 
