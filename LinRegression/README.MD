@@ -91,4 +91,11 @@ above talks about three situations in which a high VIF is not a problem and can 
 in general
 ![image](https://user-images.githubusercontent.com/2136211/118392467-871a7480-b657-11eb-95de-261274ff2865.png)
 
+```
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+variables = data_cleaned[['Mileage','Year','EngineV']]
+vif = pd.DataFrame()
+vif["VIF"] = [variance_inflation_factor(variables.values, i) for i in range(variables.shape[1])]
+vif["features"] = variables.columns
+```
 
