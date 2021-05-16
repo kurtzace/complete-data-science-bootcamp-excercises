@@ -64,4 +64,11 @@ rescaledX = scaler.transform(x)
 rescaledX
 ```
 
+later to predict
+```
+actualpredictX = pd.DataFrame({'size':[750], 'year':[2009]})
+rescaledpredictX = scaler.transform(actualpredictX) 
+reg.predict(rescaledpredictX)
+```
+
 
