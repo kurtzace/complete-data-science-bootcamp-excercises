@@ -38,6 +38,7 @@ print(p.round(3))
 ```
 
 
+
 ### Create a summary table with your findings¶
 
 ```
@@ -52,3 +53,15 @@ reg_summary.head()
 ```
 
 P value is more than 0.05 and fstat is very low - year is insignificant. can be dropped
+
+
+
+## Scaled
+```
+from sklearn.preprocessing import StandardScaler 
+scaler = StandardScaler().fit(x) 
+rescaledX = scaler.transform(x) 
+rescaledX
+```
+
+
