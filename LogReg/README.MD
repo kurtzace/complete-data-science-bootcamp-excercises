@@ -11,7 +11,7 @@ Optimization terminated successfully.
          Iterations 7
 
 res.summary()
-res.pred_table()
+res.pred_table() ## givrs confusion matrix
 
 df = df.append(pd.DataFrame({'duration': [130,120],'ans':[None, None]}))
 
