@@ -31,4 +31,19 @@ looks like probabilities
 1    0.252251
 dtype: float64
 
-##
+```
+
+### at times- errata could occur while using ol version of sm library
+when summary returns an error
+
+```
+from scipy import stats
+stats.chisqprob = lambda chisq, df: stats.chi2.sf(chisq, df)
+```
+### pseudo r2
+
+```
+values of 0.2 to 0.4 for ρ2 represent EXCELLENT fit." So basically, ρ2 can be interpreted like R2, but don't expect it to be as big. And values from 0.2-0.4 indicate (in McFadden's words) excellent model fit.
+```
+
+
