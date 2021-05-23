@@ -46,4 +46,21 @@ stats.chisqprob = lambda chisq, df: stats.chi2.sf(chisq, df)
 values of 0.2 to 0.4 for ρ2 represent EXCELLENT fit." So basically, ρ2 can be interpreted like R2, but don't expect it to be as big. And values from 0.2-0.4 indicate (in McFadden's words) excellent model fit.
 ```
 
+## from stats model return both Confusion matrix and accuracy
+```
+def confusion_matrix(data,actual_values,model):
+        #Predict the values using the Logit model
+        pred_values = model.predict(data)
+        # Specify the bins 
+        bins=np.array([0,0.5,1])
+        # Create a histogram, where if values are between 0 and 0.5 tell will be considered 0
+        # if they are between 0.5 and 1, they will be considered 1
+        cm = np.histogram2d(actual_values, pred_values, bins=bins)[0]
+        # Calculate the accuracy
+        accuracy = (cm[0,0]+cm[1,1])/cm.sum()
+        # Return the confusion matrix and the accuracy
+        return cm, accuracy
+cm = confusion_matrix(test_data,test_actual,res)
+```
+
 
