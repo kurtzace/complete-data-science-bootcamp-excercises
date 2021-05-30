@@ -2,7 +2,7 @@
 ```
 
 init_range = 0.1
-weights = np.random.uniform(low=-init_range, high=init_range, size=(2, 1))
+weights = np.random.uniform(low=-init_range, high=init_range, size=(2, 1)) # WHEN INPUT IS (1000000, 2)
 biases = np.random.uniform(low=-init_range, high=init_range, size=1)
 print (weights)
 print (biases)
