@@ -1,4 +1,6 @@
 ## bASIC nEURAL NET- NO LIBRARY
+![image](https://user-images.githubusercontent.com/2136211/120102918-df2e9c00-c16a-11eb-8594-f4af03dab5b7.png)
+
 ```
 
 init_range = 0.1
