@@ -29,6 +29,7 @@ biases = biases - learning_rate * np.sum(deltas_scaled)
 ```
 
 ## basic nn with TF
+note: The Huber loss is more appropriate than the L2-norm when we have outliers, as it is less sensitive to them 
 ```
 #gen data
 observations = 1000
