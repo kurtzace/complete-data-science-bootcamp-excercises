@@ -91,3 +91,24 @@ validation_data = validation_data.batch(num_validation_samples)
 test_data = test_data.batch(num_test_samples)
 validation_inputs, validation_targets = next(iter(validation_data))
 ```
+
+
+## Experiments with Mnist 
+see TensorFlow_MNIST_All_Exercises.ipynb
+BATCH_SIZE 100, hidden_layer_size = 50 with 2 relus gives 97% validation accuracy, 5 seconds of training
+
+hidden layer size of 200 gives val_accuracy: 0.9862 but 23 seconds of training
+
+Add another hidden layer to the algorithm of ELU gives val_accuracy: 0.9883 with 200 hidden - takes 8 seconds 
+
+5 hidden layers 2 of relu, 1 ELU, 1 PReLU and 1 sigmoid - gives val_accuracy: 0.9832 and test accuracy of  0.9745, takes 32 seconds
+
+relu and tanh gives val_accuracy: 0.9777, 50 hidden - takes 17 seconds
+
+Try a batch size of 10000.  and 50 hidden size 12 seconds and  val_accuracy: 0.8152 
+
+Try a batch size of 1.-- 387 seconds --- for 50 size
+
+Try Adam with LR 0.02 takes  18 seconds of training--- for 200 size val_accuracy: 0.9645
+
+Try Adam with LR 0.0001 -  val_accuracy: 0.9737 --- 17 seconds --- for 200 size
