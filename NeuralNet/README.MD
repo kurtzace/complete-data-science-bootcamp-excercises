@@ -112,3 +112,12 @@ Try a batch size of 1.-- 387 seconds --- for 50 size
 Try Adam with LR 0.02 takes  18 seconds of training--- for 200 size val_accuracy: 0.9645
 
 Try Adam with LR 0.0001 -  val_accuracy: 0.9737 --- 17 seconds --- for 200 size
+
+
+## Tips
+```
+# set an early stopping mechanism
+# let's set patience=2, to be a bit tolerant against random validation loss increases
+early_stopping = tf.keras.callbacks.EarlyStopping(patience=2)
+
+```
