@@ -52,9 +52,12 @@ model = tf.keras.Sequential([
                                                  )
                             ])
 custom_optimizer = tf.keras.optimizers.SGD(learning_rate=0.02)
-model.compile(optimizer=custom_optimizer, loss='mean_squared_error')
+model.compile(optimizer=custom_optimizer, loss='mean_squared_error') #metrics accuracy
 model.fit(training_data['inputs'], training_data['targets'], epochs=100, verbose=2)
 model.layers[0].get_weights()
 model.predict_on_batch(training_data['inputs']).round(1)
 plt.plot(np.squeeze(model.predict_on_batch(training_data['inputs'])), np.squeeze(training_data['targets']))
 ```
+
+![image](https://user-images.githubusercontent.com/2136211/120599093-b3f6c600-c464-11eb-92a9-b88f07d0def8.png)
+
